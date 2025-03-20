@@ -11,7 +11,7 @@ public class Jogo_Adivinha {
         
         System.out.println("***Programa sorteia números***");
         	do {
-        		System.out.println("Inicializar digite um número de 1 a " +max);
+        		System.out.println("Para inicializar digite um número de 1 a " +max);
         		chute = entrada.nextInt();
         	} while (chute <1 || chute > max);
         	
