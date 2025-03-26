@@ -6,6 +6,7 @@ public class inversao {
         Scanner entrada = new Scanner (System.in);
         int numero, unidade, dezena, centena;
 
+        System.out.println("**Programa que inverte um número inteiro**");
         System.out.println("Insira um número inteiro com 3 dígitos: ");
         numero = entrada.nextInt();
 
@@ -19,7 +20,7 @@ public class inversao {
             dezena = dezena%10;
             centena = numero/100;
             centena = centena%10;
-            System.out.println(unidade+""+dezena+""+centena);
+            System.out.println("Resultado: "+unidade+""+dezena+""+centena);
         }
         entrada.close();
 
