@@ -1,43 +1,40 @@
-package exercicios;
-
+package sorteio;
 import java.util.Scanner;
 
-public class adivinhe_numero {
-    public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int aleatorio = (int)(Math.random()*10+1), chute;
-            do {
-                System.out.println("Chute um número de 0 a 10 (3 chances)");
-                chute = entrada.nextInt();
-                    if (chute == aleatorio) {
-                        System.out.println("Você Acertou!");
-                        break;
-                    }else if (chute > aleatorio){
-                        System.out.println("Chutou alto! Tente Novamente!");
-                    }else if (chute < aleatorio){
-                        System.out.println("Chutou baixo! Tente novamente!");
-                    }
-                System.out.println("Chute um número de 0 a 10 (2 chances)");
-                chute = entrada.nextInt();
-                    if (chute == aleatorio) {
-                        System.out.println("Você Acertou!");
-                        break;
-                    }else if (chute > aleatorio){
-                        System.out.println("Chutou alto! Tente Novamente!");
-                    }else if (chute < aleatorio){
-                        System.out.println("Chutou baixo! Tente novamente!");
-                    }
-                System.out.println("Chute um número de 0 a 10 (1 chance)");
-                chute = entrada.nextInt();
-                    if (chute == aleatorio) {
-                        System.out.println("Você Acertou!");
-                        break;
-                    }else {
-                        System.out.println("Errou! Suas chances acabaram!");
-                        break;
+public class Jogo_Adivinha {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		int chute = 0, max = 10;
+        int aleatorio = (int)(Math.random()*max+1);
+        int chances = 0;
+        
+        System.out.println("***Programa sorteia números***");
+        	do {
+        		System.out.println("Para inicializar digite um número de 1 a " +max);
+        		chute = entrada.nextInt();
+        	} while (chute <1 || chute > max);
+        	
+        	for (chances = 0; chances < 3; chances ++) {
+        		System.out.println("Chute um número de 1 a " +max);
+        		chute = entrada.nextInt();
+        			if (chute == aleatorio) {
+        				System.out.println("Você Acertou!");
+        				break;
+        			}else if (chute > aleatorio){
+        				System.out.println("Chutou alto!");
+        			}else if (chute < aleatorio){
+                    System.out.println("Chutou baixo!");
+        			}
                 }
-            } while (chute != aleatorio);
+        	if (chances == 3) {
+        		System.out.println("Suas tentativas acabaram!");
+        		System.out.printf("O número secreto era %d.", aleatorio);
+        	} else {
             System.out.printf("O número secreto era %d.", aleatorio);
+        	}
             entrada.close();
-        }
+	}
+}
+
 }
