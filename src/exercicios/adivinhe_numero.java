@@ -1,7 +1,7 @@
-package sorteio;
+package exercicios;
 import java.util.Scanner;
 
-public class Jogo_Adivinha {
+public class adivinhe_numero {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
@@ -37,4 +37,3 @@ public class Jogo_Adivinha {
 	}
 }
 
-}

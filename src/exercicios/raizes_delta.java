@@ -1,7 +1,7 @@
-package sorteio;
+package exercicios;
 import java.util.Scanner;
 
-public class Raizes {
+public class raizes_delta {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner (System.in);
